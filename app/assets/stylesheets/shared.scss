@@ -1,0 +1,162 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+/* colors */
+
+$primary: #22B47E;
+$error: #cb1a1a;
+
+
+/* fonts */
+
+* {
+	font-family: 'Open Sans';
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: font-url('OpenSans-Light.ttf');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: font-url('OpenSans-Regular.ttf');
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Open Sans';
+	src: font-url('OpenSans-SemiBold.ttf');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: font-url('OpenSans-Bold.ttf');
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+/* box sizing */
+
+* {
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/* mixins */
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+
+@mixin transition($property, $time) {
+	-webkit-transition: $property $time ease;
+	-moz-transition: $property $time ease;
+	-o-transition: $property $time ease;
+	transition: $property $time ease;
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+
+/* inputs */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+	@include border-radius(3px);
+	@include box-shadow(0 1px 1px #eee);
+	@include transition(all, 0.15s);
+	border: 1px solid #eee;
+	width: 100%;
+	padding: 10px 15px;
+	font-size: 12px;
+	color: #323338;
+
+	&:focus {
+		@include transition(all, 0.15s);
+		outline-width: 0;
+		border: 1px solid $primary;
+	}
+}
+
+:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color: #BBBBBB;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: #BBBBBB;
+	opacity: 1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #BBBBBB;
+	opacity: 1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: #BBBBBB;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+	color: #BBBBBB;
+}
+
+
+/* flash */
+
+.flash {
+	padding: 10px 20px;
+	font-weight: 600;
+	font-size: 12px;
+
+	&.error {
+		background: $error;
+		color: white;
+	}
+
+	&.notice {
+		background: $primary;
+		color: white;
+	}
+}

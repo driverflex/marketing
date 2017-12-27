@@ -1,0 +1,183 @@
+@import "shared.scss";
+
+
+/* registrations/new */
+
+#registrations-new {
+  height: 100%;
+
+  .sidebar {
+  	display: inline-block;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	height: 100%;
+  	width: 30%;
+  	overflow-x: hidden;
+
+
+  	#logo {
+  		position: absolute;
+  		top: 0;
+  		left: 0;
+  		color: white;
+  		z-index: 2;
+  		font-family: 'HelveticaNeue-CondensedBlack';
+  		font-size: 20px;
+  		margin: 20px 40px;
+
+  		&:hover, &:active, &:focus {
+  			text-decoration: none;
+  		}
+  	}
+
+  	img {
+  		position: relative;
+  		height: 100%;
+  		z-index: 0;
+  	}
+  }
+
+  #signup-container {
+  	display: inline-block;
+  	float: left;
+  	width: 70%;
+  	margin-left: 30%;
+
+  	form {
+  		margin: 40px auto;
+  		width: 80%;
+
+	  	h2 {
+	  		color: #323338;
+	  		font-weight: 600;
+	  		font-size: 22px;
+	  		margin-top: 0;
+	  		margin-bottom: 10px;
+	  	}
+
+	  	h4 {
+	  		color: #7D868F;
+	  		font-weight: 400;
+	  		font-size: 14px;
+	  		margin: 0;
+	  	}
+
+	  	.form-inputs {
+	  		margin-top: 40px;
+
+		  	.input {
+		  		margin-bottom: 20px;
+		  		float: left;
+		  		width: 100%;
+
+		  		label {
+		  			display: block;
+		  			color: #323338;
+		  			font-weight: 700;
+		  			font-size: 12px;
+		  			margin-bottom: 10px;
+		  		}
+
+					 .hint, .error{
+						font-size: 11px;
+						margin-top: 3px;
+					}
+
+					.hint {
+						color: #7D868F;
+					}
+
+					.error {
+						color: $error;
+					}
+		  	}
+
+		  	.field_with_errors {
+		  		input {
+		  			border: 1px solid $error;
+		  		}
+
+	  			.hint {
+	  				display: none;
+	  			}
+	  		}
+
+		  	.user_first_name, .user_last_name {
+		  		@include calc(width, "50% - 10px");
+		  	}
+
+		  	.user_first_name {
+		  		margin-right: 10px;
+		  	}
+
+		  	.user_last_name {
+		  		margin-left: 10px;
+		  	}
+
+	  		.radio {
+		  		display: inline-block;
+		  		margin-right: 40px;
+
+		  		label {
+		  			font-size: 13px;
+		  			color: #323338;
+		  			font-weight: 400;
+
+		  			input {
+		  				margin-top: 3px;
+		  			}
+		  		}
+		  	}
+	  	}
+
+	  	.form-actions {
+	  		button {
+	  			@include transition(all, 0.15s);
+	  			@include border-radius(3px);
+		  		background: $primary;
+		  		border: 1px solid $primary;
+		  		width: 100%;
+		  		padding: 10px 20px;
+		  		
+
+		  		.button-text {
+		  			display: inline-block;
+		  			font-size: 11px;
+			  		font-weight: 800;
+			  		color: white;
+			  		text-transform: uppercase;
+			  		letter-spacing: 0.3px;
+		  		}
+
+		  		svg {
+		  			@include scale(1.5);
+		  			display: inline-block;
+		  			height: 15px;
+		  			margin-bottom: -5px;
+		  			margin-left: 5px;
+		  		}
+
+		  		&:focus {
+		  			outline-width: 0;
+		  		}
+
+		  		&:hover, &:focus, &:active {
+		  			@include transition(all, 0.15s);
+		  		}
+
+		  		&:hover {
+		  			background: lighten($primary, 3%);
+						border: 1px solid lighten($primary, 3%);
+		  		}
+
+		  		&:active {
+						@include box-shadow(inset 0 1px 3px rgba(0, 0, 0, 0.1));
+						background: darken($primary, 3%);
+						border: 1px solid darken($primary, 3%);
+					}
+		  	}
+	  	}
+  	}
+  }
+}
