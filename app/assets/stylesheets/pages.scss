@@ -1,3 +1,6 @@
+@import "shared.scss";
+
+
 /* pages/home */
 
 #pages-home {
@@ -15,8 +18,8 @@
 	  background-size: cover;
 	  
 	  .container {
-	  	padding-top: 160px;
-	   	padding-bottom: 160px;
+	  	padding-top: 180px;
+	   	padding-bottom: 180px;
 
 	  	.tagline, .description {
 	  		max-width: 500px;
@@ -64,8 +67,8 @@
 
 	#checkpoints {
 		.container {
-			padding-top: 40px;
-			padding-bottom: 40px;
+			padding-top: 50px;
+			padding-bottom: 45px;
 
 			ul {
 				list-style: none;
@@ -75,14 +78,14 @@
 
 				li {
 					svg {
-						height: 22px;
+						height: 24px;
 						margin-right: 10px;
-						margin-bottom: -9px;
+						margin-bottom: -10px;
 					}
 
 					.text {
 						color: #7D868F;
-						font-size: 13px;
+						font-size: 12px;
 					}
 				}
 			}
@@ -90,7 +93,73 @@
 	}
 
 	#how-it-works {
+		background: #F7F9FC;
 
+		.container {
+			padding-top: 80px;
+			padding-bottom: 80px;
+
+			ul {
+				list-style: none;
+    		padding: 0;
+
+    		li {
+    			@include calc(width, "100%/3 - 140px/3");
+    			margin-right: 70px;
+    			float: left;
+
+    			&:last-child {
+    				margin-right: 0px;
+    			}
+
+    			&#signup-section {
+    				svg {
+    					width: 23px;
+    					margin-top: 8px;
+    					margin-right: -3px;
+    				}
+    			}
+
+    			&#inspect-section {
+    				svg {
+    					width: 23px;
+    					margin-top: 3px;
+    					margin-right: -1px;
+    				}
+    			}
+
+    			&#cash-section {
+    				svg {
+    					width: 22px;
+    					margin-top: 8px;
+    				}
+    			}
+
+    			.svg-wrapper {
+    				@include border-radius(50%);
+    				width: 40px;
+    				height: 40px;
+    				background: #C5F2C1;
+    				text-align: center;
+    			}
+
+    			.title {
+    				text-transform: uppercase;
+		  			letter-spacing: 0.3px;
+		  			font-size: 12px;
+		  			font-weight: 800;
+		  			color: $primary;
+		  			margin: 15px 0;
+    			}
+
+    			.description {
+    				color: #7D868F;
+    				font-size: 12px;
+    				line-height: 24px;
+    			}
+    		}
+			}
+		}
 	}
 
 	#recommendations {
