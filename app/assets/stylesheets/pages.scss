@@ -15,8 +15,65 @@
 	  background-size: cover;
 	  
 	  .container {
-	  	padding-top: 120px;
-	  	padding-bottom: 50px;
+	  	padding-top: 160px;
+	   	padding-bottom: 160px;
+
+	  	.tagline, .description {
+	  		max-width: 500px;
+	  	}
+
+	  	.tagline {
+	  		font-size: 26px;
+	  		color: white;
+	  	}
+
+	  	.description {
+	  		font-size: 14px;
+	  		line-height: 25px;
+	  		color: rgba(255,255,255,0.75);
+	  		margin-top: 20px;
+	  	}
+
+	  	.actions {
+	  		margin-top: 60px;
+
+	  		a {
+	  			text-transform: uppercase;
+	  			letter-spacing: 0.3px;
+	  			font-size: 12px;
+	  			font-weight: 600;
+	  			margin-right: 10px;
+
+	  			svg {
+	  				height: 20px;
+	  				margin-right: 10px;
+	  				margin-bottom: -7px;
+	  			}
+	  		}
+	  	}
+
+	  	.pricing {
+	  		margin-top: 20px;
+	  		font-size: 11px;
+	  		color: rgba(255,255,255,0.75);
+	  		width: 188px;
+	  		text-align: center;
+	  	}
 	  }
+	}
+
+	#checkpoints {
+		.container {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+	}
+
+	#how-it-works {
+
+	}
+
+	#recommendations {
+
 	}
 }

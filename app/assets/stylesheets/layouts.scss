@@ -24,7 +24,7 @@ html, body {
   		color: white;
 
   		&:active {
-  			color: darken(white, 10%);
+  			color: darken(white, 15%);
   		}
 		}
 
@@ -43,10 +43,10 @@ html, body {
 				}
 
 				&:active {
-					color: darken(white, 10%);
+					color: darken(white, 15%);
 
 					 svg {
-					 	fill: darken(white, 10%);
+					 	fill: darken(white, 15%);
 					 }
 				}
 			}

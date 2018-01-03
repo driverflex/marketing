@@ -1,8 +1,45 @@
 <div id="pages-home">
 	<div id="intro">
 		<div class="container">
-			Earn $1,000 cash bonus or more driving for Uber and Lyft. Guaranteed.
-			DriverFlex opens the door to lucrative cash bonuses in 5 minutes or less. Valid U.S. driver’s license, 21 years of age, and over 3 years of driving experience required.
+			<div class="tagline">
+				Earn $1,000 cash bonus or more driving for Uber and Lyft. Guaranteed.
+			</div>
+			<div class="description">
+				DriverFlex opens the door to lucrative cash bonuses in 5 minutes or less. Valid U.S. driver’s license, 21 years of age, and over 3 years of driving experience required.
+			</div>
+			<div class="actions">
+				<%= link_to new_user_registration_path, class: "button primary" do %>
+					<%= inline_svg "car.svg" %>
+					<span class="text">Let's Get Started</span>
+				<% end %>
+
+				<%= link_to "#", class: "button white", id: "learn-more" do %>
+					<%= inline_svg "down.svg" %>
+					<span class="text">Learn More</span>
+				<% end %>
+			</div>
+
+			<div class="pricing">
+				It's free to sign up
+			</div>
+		</div>
+	</div>
+
+	<div id="checkpoints">
+		<div class="container">
+			checkpoints
+		</div>
+	</div>
+
+	<div id="how-it-works">
+		<div class="container">
+			how-it-works
+		</div>
+	</div>
+
+	<div id="recommendations">
+		<div class="container">
+			recommendations
 		</div>
 	</div>
 </div>
