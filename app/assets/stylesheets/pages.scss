@@ -8,7 +8,7 @@
 	z-index: 0;
 
 	#intro {
-		background: url(car.jpg) no-repeat center center fixed;
+		background: url(car.jpg) no-repeat center center;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
@@ -66,6 +66,26 @@
 		.container {
 			padding-top: 40px;
 			padding-bottom: 40px;
+
+			ul {
+				list-style: none;
+				display: flex;
+    		justify-content: space-between;
+    		padding: 0;
+
+				li {
+					svg {
+						height: 22px;
+						margin-right: 10px;
+						margin-bottom: -9px;
+					}
+
+					.text {
+						color: #7D868F;
+						font-size: 13px;
+					}
+				}
+			}
 		}
 	}
 
