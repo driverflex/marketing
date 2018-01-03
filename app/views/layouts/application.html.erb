@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <%= render partial: "layouts/header" unless current_page?(new_user_registration_path) %>
     <%= render partial: "layouts/flash" unless flash.empty? %>
     <%= yield %>
   </body>

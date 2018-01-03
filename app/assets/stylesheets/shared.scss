@@ -143,20 +143,14 @@ input[type="password"] {
 }
 
 
-/* flash */
+/* links */
 
-.flash {
-	padding: 10px 20px;
-	font-weight: 600;
-	font-size: 12px;
+a {
+	@include transition(all, 0.15s);
+	text-decoration: none;
 
-	&.error {
-		background: $error;
-		color: white;
-	}
-
-	&.notice {
-		background: $primary;
-		color: white;
+	&:hover, &:active, &:focus {
+		@include transition(all, 0.15s);
+		text-decoration: none;
 	}
 }
