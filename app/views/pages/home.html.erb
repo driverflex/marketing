@@ -149,4 +149,32 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="next-steps">
+		<div class="next-step-section" id="claim-reward">
+			<div class="title">
+				Claim your reward!
+			</div>
+			<div class="description">
+				Signup with Driverflex and collect your $1,000 cash bonus now. It's free!
+			</div>
+			<%= link_to new_user_registration_path, class: "button primary" do %>
+				<%= inline_svg "car.svg" %>
+				<span class="text">Let's Get Started</span>
+			<% end %>
+		</div>
+
+		<div class="next-step-section" id="more-questions">
+			<div class="title">
+				Any questions?
+			</div>
+			<div class="description">
+				Shoot us an email and we'll answer you back within 24 hours.
+			</div>
+			<%= link_to "#!", class: "button white" do %>
+				<%= inline_svg "email.svg" %>
+				<span class="text">Email Us Now</span>
+			<% end %>
+		</div>
+	</div>
 </div>
