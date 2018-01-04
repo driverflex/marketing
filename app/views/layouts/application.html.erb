@@ -12,5 +12,6 @@
     <%= render partial: "layouts/header" unless current_page?(new_user_registration_path) %>
     <%= render partial: "layouts/flash" unless flash.empty? %>
     <%= yield %>
+    <%= render partial: "layouts/footer" unless current_page?(new_user_registration_path) %>
   </body>
 </html>

@@ -43,7 +43,7 @@ html, body {
 				}
 
 				&:active {
-					color: darken(white, 15%);
+					color: rgba(255,255,255,0.7);
 
 					 svg {
 					 	fill: darken(white, 15%);
@@ -72,5 +72,67 @@ html, body {
 	&.notice {
 		background: $primary;
 		color: white;
+	}
+}
+
+
+/* layouts/_footer */
+
+#footer {
+	background: $secondary;
+	overflow: auto;
+	padding: 40px 0;
+
+	.container {
+		ul.actions {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li {
+				margin-right: 40px;
+				float: left;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				a {
+					color: darken(white, 15%);
+					text-transform: uppercase;
+	  			letter-spacing: 0.3px;
+	  			font-size: 11px;
+	  			font-weight: 800;
+
+	  			&:hover {
+	  				color: white;
+	  			}
+
+	  			&:active {
+						color: darken(white, 15%);
+					}
+				}
+			}
+		}
+
+		.incorporated {
+			float: right;
+
+			a {
+				color: rgba(255,255,255,0.7);
+				text-transform: uppercase;
+  			letter-spacing: 0.3px;
+  			font-size: 11px;
+  			font-weight: 800;
+
+  			&:hover {
+  				color: white;
+  			}
+
+  			&:active {
+					color: rgba(255,255,255,0.7);
+				}
+			}
+		}
 	}
 }
