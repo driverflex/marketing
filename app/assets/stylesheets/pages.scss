@@ -16,11 +16,9 @@
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
+	  padding: 180px 0;
 	  
 	  .container {
-	  	padding-top: 180px;
-	   	padding-bottom: 180px;
-
 	  	.tagline, .description {
 	  		max-width: 500px;
 	  	}
@@ -94,11 +92,9 @@
 
 	#how-it-works {
 		background: #F7F9FC;
+		padding: 100px 0;
 
 		.container {
-			padding-top: 80px;
-			padding-bottom: 80px;
-
 			ul {
 				list-style: none;
     		padding: 0;
@@ -163,6 +159,80 @@
 	}
 
 	#recommendations {
+		padding: 100px 0 150px 0;
 
+		.container {
+			.rec-section {
+				text-align: center;
+
+				img {
+					@include border-radius(50%);
+					width: 60px;
+					height: 60px;
+					margin: 0 auto;
+				}
+
+				.text {
+					color: #7D868F;
+					font-size: 14px;
+					line-height: 30px;
+					font-style: italic;
+					max-width: 600px;
+					margin: 35px auto;
+				}
+
+				.name {
+					color: #323338;
+					font-size: 13px;
+					font-weight: 800;
+					margin-bottom: 5px;
+				}
+
+				.handle {
+					color: #ABAFB3;
+					font-size: 12px;
+				}
+			}
+
+			.slick-arrow {
+				@include calc(top, '50% - 20px');
+				position: absolute;
+				cursor: pointer;
+				fill: rgb(230,230,230);
+
+				g {
+					fill: rgb(230,230,230);
+				}
+
+				&#prev-arrow {
+					left: 0;
+				}
+
+				&#next-arrow {
+					right: 0;
+				}
+			}
+
+			.slick-dots {
+				margin-left: -14px;
+				margin-bottom: -70px;
+
+				li {
+					margin: 0 2px;
+
+					button:before {
+						color: rgb(230,230,230);
+						font-size: 32px;
+						opacity: 1;
+					}
+				}
+
+				.slick-active {
+					button:before {
+						color: #1F3446;
+					}
+				}
+			}
+		}
 	}
 }

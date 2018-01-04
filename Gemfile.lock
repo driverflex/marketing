@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/bodrovis/jquery-slick-rails.git
+  revision: 2e9462d7588c1c1f3e0beabc3554ee684a706b44
+  specs:
+    jquery-slick-rails (1.8.1)
+      railties (>= 3.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -83,7 +90,6 @@ GEM
     font-awesome-rails (4.7.0.2)
       railties (>= 3.2, < 5.2)
     formatador (0.2.5)
-    geocoder (1.4.5)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     guard (2.14.1)
@@ -128,7 +134,7 @@ GEM
     method_source (0.9.0)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
-    minitest (5.10.3)
+    minitest (5.11.1)
     multi_json (1.12.2)
     multi_xml (0.6.0)
     nenv (0.3.0)
@@ -258,12 +264,12 @@ DEPENDENCIES
   factory_girl_rails (~> 4.0)
   faker
   font-awesome-rails
-  geocoder
   guard-rspec
   httparty
   inline_svg
   jbuilder (~> 2.5)
   jquery-rails
+  jquery-slick-rails!
   jquery-ui-rails
   listen (~> 3.0.5)
   pg

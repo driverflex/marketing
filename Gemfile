@@ -34,6 +34,8 @@ gem 'font-awesome-rails'
 gem 'devise'
 # Embed SVG documents in Rails views and style them with CSS. Read more: https://github.com/jamesmartin/inline_svg
 gem 'inline_svg'
+# Carousel. Read more: https://github.com/bodrovis/jquery-slick-rails
+gem 'jquery-slick-rails', github: 'bodrovis/jquery-slick-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
