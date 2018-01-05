@@ -4,7 +4,9 @@
 /* shared/_sidebar */
 
 .devise-sidebar {
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
 	height: 100%;
 	width: 30%;
 	overflow-x: hidden;
@@ -41,7 +43,7 @@
 	height: 100%;
 
 	#signup-container, #signin-container {
-		float: left;
+		float: right;
   	width: 70%;
 
   	form {
@@ -132,7 +134,7 @@
 					width: 100%;
 					padding: 90px 0 50px 0;
 					margin-top: -50px;
-					background: url(driver.jpg) no-repeat center center;
+					background: url(driver.jpg) no-repeat bottom center;
 				  -webkit-background-size: cover;
 				  -moz-background-size: cover;
 				  -o-background-size: cover;
@@ -205,20 +207,4 @@
 	  	}
   	}
   }
-}
-
-
-/* sessions/new */
-
-#sessions-new {
-	height: 100%;
-
-	#signin-container {
-		float: left;
-		width: 70%;
-
-		form {
-
-		}
-	}
 }
