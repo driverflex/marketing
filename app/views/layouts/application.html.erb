@@ -6,15 +6,16 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=<%= Rails.application.secrets.google_api_key %>"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'favicon.ico' %>
   </head>
 
   <body>
-    <%= render partial: "layouts/header" if controller_name == "pages" %>
+    <%= render partial: "layouts/header" if ["pages", "users"].include?(controller_name) %>
     <%= render partial: "layouts/menu" %>
     <%= render partial: "layouts/sidebar" %>
     <%= render partial: "layouts/flash" unless flash.empty? %>
     <%= yield %>
-    <%= render partial: "layouts/footer" if controller_name == "pages" %>
+    <%= render partial: "layouts/footer" if ["pages", "users"].include?(controller_name) %>
     <%= render partial: "shared/chat" %>
   </body>
 </html>

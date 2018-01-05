@@ -1,5 +1,7 @@
 $(document).ready ->
-	# close flash notification
+	# open flash notification
+	$('.flash').addClass 'active'
+
 	$('html').on 'click', '.close-flash', ->
 		$('.close-flash').parent('.container').parent('.flash').removeClass 'active'
 		return

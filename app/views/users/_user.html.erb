@@ -1,0 +1,23 @@
+<tr class="user inactive" id="user_<%= user.id %>">
+	<td class="user-name">
+		<%= inline_svg "inactive_checkbox.svg", class: "checkbox inactive-checkbox" %>
+		<%= inline_svg "active_checkbox.svg", class: "checkbox active-checkbox" %>
+		<%= user.first_name %> <%= user.last_name %>
+	</td>
+	<td>
+		<%= user.email %>
+	</td>
+	<td>
+		<%= user.phone %>
+	</td>
+	<td>
+		<%= user.city %>
+	</td>
+	<td>
+		<%= user.status %>
+	</td>
+	<td class="user-created-at">
+		<%= time_ago_in_words(user.created_at) %> ago 
+		<%= inline_svg "clock.svg" %>
+	</td>
+</tr>

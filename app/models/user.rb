@@ -11,6 +11,10 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :city, presence: true
   validates :role, presence: true
+  validates :status, presence: true
+
+  # scopes
+  scope :by_date, -> { order("created_at desc") }
 
   def is_admin?
     user = self

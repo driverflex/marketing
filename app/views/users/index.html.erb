@@ -1,3 +1,36 @@
 <div id="users-index">
-	<%= render @users %>
+	<div class="container">
+		<div class="user-index-wrapper">
+			<div id="users-index-header">
+				<div class="user-count">
+					<%= pluralize(User.all.count, "user") %>
+				</div>
+				<div class="actions">
+					<%= link_to "#!" do %>
+						<%= inline_svg "delete.svg", class: "delete-icon" %>
+					<% end %>
+					<%= link_to "#!" do %>
+						<%= inline_svg "edit.svg", class: "edit-icon" %>
+					<% end %>
+				</div>
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<th>
+							<%= inline_svg "inactive_checkbox.svg" %> Name
+						</th>
+						<th>Email</th>
+						<th>Phone</th>
+						<th>City</th>
+						<th>Status</th>
+						<th>Date Created</th>
+					</tr>
+				</thead>
+				<tbody>
+					<%= render @users %>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </div>
