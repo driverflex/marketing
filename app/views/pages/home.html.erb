@@ -171,7 +171,7 @@
 			<div class="description">
 				Shoot us an email and we'll answer you back within 24 hours.
 			</div>
-			<%= link_to "#!", class: "button white" do %>
+			<%= mail_to "hello@driverflex.com", class: "button white" do %>
 				<%= inline_svg "email.svg" %>
 				<span class="text">Email Us Now</span>
 			<% end %>
