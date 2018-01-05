@@ -1,7 +1,7 @@
 $(document).ready ->
 	# scroll down on button click
 	$('html').on 'click', '#learn-more', ->
-	  $('html, body').animate { scrollTop: $('#checkpoints').offset().top }, 1000
+	  $('html, body').animate { scrollTop: $('#checkpoints').offset().top }, 500
 	  return
 
 	# initialize slick carousel for recommendations

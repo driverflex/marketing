@@ -1,0 +1,36 @@
+<div id="sidebar">
+	<div class="logo-wrapper">
+		<%= render partial: "shared/logo" %>
+		<div id="close-sidebar">
+			<%= inline_svg "exit.svg" %>
+		</div>
+	</div>
+	<ul class="actions">
+		<% if user_signed_in? %>
+			<li>
+				<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+			</li>
+		<% else %>
+			<li>
+				<%= link_to new_user_registration_path do %>
+					Create Account 
+					<%= inline_svg "next.svg" %>
+				<% end %>
+			</li>
+			<li>
+				<%= link_to "Sign In", new_user_session_path %>
+			</li>
+		<% end %>
+		<li>
+			<%= link_to "Terms And Conditions", "" %>
+		</li>
+		<li>
+			<%= link_to "Privacy Policy", "" %>
+		</li>
+		<li>
+			<%= link_to "Contact", "" %>
+		</li>
+	</ul>
+</div>
+
+<div id="sidebar-overlay"></div>
