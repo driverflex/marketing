@@ -393,3 +393,39 @@
 		}
 	}	
 }
+
+
+/* terms, privacy */
+
+#pages-terms, #pages-privacy {
+	padding: 60px 0;
+
+	.container {
+		h2 {
+			margin-bottom: 50px;
+			margin-top: 0;
+		}
+
+		h5 {
+			font-weight: 600;
+			font-size: 14px;
+			color: #323338;
+			margin-top: 25px;
+		}
+
+		p {
+			color: #7D868F;
+			font-size: 13px;
+			line-height: 22px;
+		}
+
+		ul {
+			li {
+				color: #7D868F;
+				font-size: 13px;
+				line-height: 22px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}

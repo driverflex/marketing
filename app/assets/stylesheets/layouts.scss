@@ -44,6 +44,10 @@ html, body {
 			}
 		}
 	}
+
+	&.secondary {
+		background: $secondary;
+	}
 }
 
 @media only screen and (max-width: 736px) {
@@ -251,7 +255,7 @@ html, body {
 				}
 
 				a {
-					color: darken(white, 15%);
+					color: rgba(255,255,255,0.75);
 					text-transform: uppercase;
 	  			letter-spacing: 0.3px;
 	  			font-size: 11px;
@@ -262,7 +266,7 @@ html, body {
 	  			}
 
 	  			&:active {
-						color: darken(white, 15%);
+						color: rgba(255,255,255,0.75);
 					}
 				}
 			}
