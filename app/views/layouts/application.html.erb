@@ -9,12 +9,12 @@
   </head>
 
   <body>
-    <%= render partial: "layouts/header" unless current_page?(new_user_registration_path) || current_page?(new_user_session_path) %>
+    <%= render partial: "layouts/header" if controller_name == "pages" %>
     <%= render partial: "layouts/menu" %>
     <%= render partial: "layouts/sidebar" %>
     <%= render partial: "layouts/flash" unless flash.empty? %>
     <%= yield %>
-    <%= render partial: "layouts/footer" unless current_page?(new_user_registration_path) || current_page?(new_user_session_path) %>
+    <%= render partial: "layouts/footer" if controller_name == "pages" %>
     <%= render partial: "shared/chat" %>
   </body>
 </html>
