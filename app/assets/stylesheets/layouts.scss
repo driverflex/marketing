@@ -82,6 +82,10 @@ body {
 		border-bottom: 1px solid rgba(255,255,255,0.15);
 		padding: 10px 0;
 
+		&.secondary {
+			background: $secondary;
+		}
+
 		#menu-button {
 			@include transition(all, 0.15s);
 			position: absolute;

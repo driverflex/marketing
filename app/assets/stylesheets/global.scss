@@ -151,6 +151,15 @@ input[type="password"] {
 }
 
 
+/* mobile */
+
+@media only screen and (max-width: 736px) {
+	.hide-mobile {
+		display: none;
+	}
+}
+
+
 /* links */
 
 a {

@@ -102,6 +102,10 @@ tr.user {
 		font-size: 13px;
 		color: #7D868F;
 
+		.delete-link {
+			display: none;
+		}
+
 		&.user-name {
 			border-left: 5px solid rgba(255,255,255,0);
 			padding-left: 10px;
@@ -133,10 +137,6 @@ tr.user {
 				margin-left: 5px;
 				margin-bottom: -3px;
 				width: 11px;
-			}
-
-			.delete-link {
-				display: none;
 			}
 		}
 	}

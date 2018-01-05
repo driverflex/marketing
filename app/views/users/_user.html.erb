@@ -3,22 +3,22 @@
 		<%= inline_svg "inactive_checkbox.svg", class: "checkbox inactive-checkbox" %>
 		<%= inline_svg "active_checkbox.svg", class: "checkbox active-checkbox" %>
 		<%= user.first_name %> <%= user.last_name %>
+		<%= link_to "delete", user, method: :delete, class: "delete-link",  data: {confirm: "Sure you want to delete #{user.first_name} #{user.last_name}?" } %>
 	</td>
 	<td>
 		<%= user.email %>
 	</td>
-	<td>
+	<td class="hide-mobile">
 		<%= user.phone %>
 	</td>
-	<td>
+	<td class="hide-mobile">
 		<%= user.city %>
 	</td>
-	<td>
+	<td class="hide-mobile">
 		<%= user.status %>
 	</td>
-	<td class="user-created-at">
+	<td class="user-created-at hide-mobile">
 		<%= time_ago_in_words(user.created_at) %> ago 
 		<%= inline_svg "clock.svg" %>
-		<%= link_to "delete", user, method: :delete, class: "delete-link",  data: {confirm: "Sure you want to delete #{user.first_name} #{user.last_name}?" } %>
 	</td>
 </tr>
