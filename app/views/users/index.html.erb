@@ -6,10 +6,10 @@
 					<%= pluralize(User.all.count, "user") %>
 				</div>
 				<div class="actions">
-					<%= link_to "#!" do %>
+					<%= link_to "#!", class: "delete-button" do %>
 						<%= inline_svg "delete.svg", class: "delete-icon" %>
 					<% end %>
-					<%= link_to "#!" do %>
+					<%= link_to "#!", class: "edit-button" do %>
 						<%= inline_svg "edit.svg", class: "edit-icon" %>
 					<% end %>
 				</div>

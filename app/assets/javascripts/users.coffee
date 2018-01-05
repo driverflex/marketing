@@ -12,6 +12,11 @@ $(document).ready ->
     $(this).parent('.user-name').parent('.user').removeClass('inactive')
     return
 
+  # delete selected user
+  $('html').on 'click', '.delete-button', ->
+    $('.user.active .delete-link').click()
+    return
+
   # autocomplete address with google places api
   if $('#user_city').length
     google.maps.event.addDomListener window, 'load', initializeAutocomplete
