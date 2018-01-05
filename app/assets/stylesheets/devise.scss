@@ -205,6 +205,38 @@
 		  		}
 		  	}
 	  	}
+
+	  	.form-reminder {
+	  		color: #7D868F;
+	  		font-size: 13px;
+	  		line-height: 22px;
+	  		margin-top: 20px;
+
+	  		a {
+	  			color: $primary;
+
+	  			&:hover {
+						color: lighten($primary, 3%);
+					}
+
+					&:active {
+						color: darken($primary, 3%);
+					}
+	  		}
+	  	}
   	}
   }
+}
+
+@media only screen and (max-width: 736px) {
+	#registrations-new {
+	  #signup-container {
+	  	form {
+	  		.form-reminder {
+					padding-left: 15px;
+					padding-right: 15px;
+	  		}
+			}
+		}
+	}
 }
