@@ -22,7 +22,7 @@ html, body {
 	.container {
 		.actions {
 			float: right;
-			margin-top: 5px;
+			margin-top: 3px;
 
 			a {
 				color: white;
@@ -218,15 +218,14 @@ html, body {
 	@include box-shadow(0 1px 2px #ddd);
 	@include border-radius(3px);
 	@include calc(right, "-100% - 5px");
-	@include calc(width, "100% - 30px");
 	position: fixed;
-	top: 80px;
+	top: 60px;
 	z-index: 2;
 	padding: 15px 15px;
 	font-size: 13px;
 	color: #323338;
 	border: 1px solid #ddd;
-	max-width: 420px;
+	width: 300px;
 	background: white;
 	transition-property: all;
   transition-duration: 1s;
@@ -253,7 +252,7 @@ html, body {
 		width: 100%;
 
 		.content {
-			@include calc(width, "100% - 30px");
+			@include calc(width, "100% - 20px");
 			float: left;
 		}
 
@@ -273,6 +272,12 @@ html, body {
 		}
 	}
 
+}
+
+@media only screen and (max-width: 736px) {
+	.flash {
+		@include calc(width, "100% - 30px");
+	}
 }
 
 

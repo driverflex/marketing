@@ -46,6 +46,12 @@ $error: #cb1a1a;
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'HelveticaNeue-CondensedBold';
+	src: font-url('HelveticaNeue-CondensedBold.ttf');
+	font-style: normal;
+}
+
 
 /* box sizing */
 
@@ -109,10 +115,11 @@ input[type="password"] {
 	padding: 10px 15px;
 	font-size: 12px;
 	color: #323338;
+	outline: none;
 
 	&:focus {
 		@include transition(all, 0.15s);
-		outline-width: 0;
+		outline: none;
 		border: 1px solid $primary;
 	}
 }

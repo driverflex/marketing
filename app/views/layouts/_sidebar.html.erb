@@ -6,11 +6,7 @@
 		</div>
 	</div>
 	<ul class="actions">
-		<% if user_signed_in? %>
-			<li>
-				<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-			</li>
-		<% else %>
+		<% unless user_signed_in? %>
 			<li>
 				<%= link_to new_user_registration_path do %>
 					Create Account 
@@ -19,6 +15,11 @@
 			</li>
 			<li>
 				<%= link_to "Sign In", new_user_session_path %>
+			</li>
+		<% end %>
+		<% if user_signed_in? && current_user.is_admin? %>
+			<li>
+				<%= link_to "Admin Dashboard", "#" %>
 			</li>
 		<% end %>
 		<li>
@@ -30,6 +31,11 @@
 		<li>
 			<%= mail_to "hello@driverflex.com", "Contact" %>
 		</li>
+		<% if user_signed_in? %>
+			<li>
+				<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+			</li>
+		<% end %>
 	</ul>
 </div>
 

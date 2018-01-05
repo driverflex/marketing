@@ -1,7 +1,7 @@
 <% flash.each do |key, value| %>
   <div class="flash active <%= key %>">
   	<div class="container">
-  		<%= value %>
+  		<div class="content"><%= value %></div>
   		<%= inline_svg "exit.svg", class: "close-flash" %>
   	</div>
   </div>
