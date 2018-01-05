@@ -1,4 +1,13 @@
 class UsersController < ApplicationController
+	before_action :authenticate_user!
+	before_action :admin_user
+
+	def edit
+	end
+
+	def update
+	end
+
   def index
   	@users = User.by_date
   end

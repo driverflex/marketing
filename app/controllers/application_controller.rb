@@ -4,6 +4,12 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  	def admin_user
+  		unless current_user && current_user.is_admin?
+  			redirect_to root_path
+  		end
+  	end
+
   	def configure_permitted_parameters
 	    devise_parameter_sanitizer.permit(:sign_up, 
 	    	keys: [
