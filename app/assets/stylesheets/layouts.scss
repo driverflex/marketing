@@ -215,21 +215,64 @@ html, body {
 /* _flash */
 
 .flash {
-	position: relative;
+	@include box-shadow(0 1px 2px #ddd);
+	@include border-radius(3px);
+	@include calc(right, "-100% - 5px");
+	@include calc(width, "100% - 30px");
+	position: fixed;
+	top: 80px;
 	z-index: 2;
-	padding: 10px 20px;
-	font-weight: 600;
-	font-size: 12px;
+	padding: 15px 15px;
+	font-size: 13px;
+	color: #323338;
+	border: 1px solid #ddd;
+	max-width: 420px;
+	background: white;
+	transition-property: all;
+  transition-duration: 1s;
 
-	&.error {
-		background: $error;
-		color: white;
+  &.active {
+  	right: 15px
+  }
+
+	&.error, &.alert {
+		border-top: 5px solid $error;
 	}
 
 	&.notice {
-		background: $primary;
-		color: white;
+		border-top: 5px solid $secondary;
 	}
+
+	&.success {
+		border-top: 5px solid $primary;
+	}
+
+	.container {
+		position: relative;
+		width: inherit;
+		width: 100%;
+
+		.content {
+			@include calc(width, "100% - 30px");
+			float: left;
+		}
+
+		.close-flash {
+			@include transition(all, 0.15s);
+			position: absolute;
+			top: 0;
+			right: 10px;
+			width: 20px;
+			cursor: pointer;
+			fill: #7D868F;
+
+			&:active {
+				@include transition(all, 0.15s);
+				fill: darken(#7D868F, 20%);
+			}
+		}
+	}
+
 }
 
 
