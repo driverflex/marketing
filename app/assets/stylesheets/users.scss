@@ -97,12 +97,19 @@ tr.user {
 		}
 	}
 
+	&:last-child {
+		td {
+			border-bottom: 0px;
+		}
+	}
+
 	td {
 		padding: 20px 15px;
 		font-size: 13px;
 		color: #7D868F;
+		border-bottom: 1px solid #ddd;
 
-		.delete-link {
+		.delete-link, .edit-link {
 			display: none;
 		}
 

@@ -4,6 +4,7 @@
 		<%= inline_svg "active_checkbox.svg", class: "checkbox active-checkbox" %>
 		<%= user.first_name %> <%= user.last_name %>
 		<%= link_to "delete", user, method: :delete, class: "delete-link",  data: {confirm: "Sure you want to delete #{user.first_name} #{user.last_name}?" } %>
+		<%= link_to "edit", edit_user_path(user), class: "edit-link" %>
 	</td>
 	<td>
 		<%= user.email %>

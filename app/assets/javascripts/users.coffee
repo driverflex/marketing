@@ -17,6 +17,11 @@ $(document).ready ->
     $('.user.active .delete-link').click()
     return
 
+  # edit selected user
+  $('html').on 'click', '.edit-button', ->
+    $('.user.active .edit-link')[0].click()
+    return
+
   # autocomplete address with google places api
   if $('#user_city').length
     google.maps.event.addDomListener window, 'load', initializeAutocomplete

@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 	before_action :admin_user
 
 	def edit
+		@user = User.find(params[:id])
 	end
 
 	def update

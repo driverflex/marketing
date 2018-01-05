@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 	get 'privacy', to: 'pages#privacy', as: 'privacy'
 
   devise_for :users
-  resources :users, only: [:index, :destroy]
+  resources :users, only: [:index, :destroy, :edit, :update]
 end
