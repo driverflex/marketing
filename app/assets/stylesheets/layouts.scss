@@ -247,7 +247,7 @@ body {
   	right: 15px
   }
 
-	&.error, &.alert {
+	&.error, &.alert, &.fail {
 		border-top: 5px solid $error;
 	}
 

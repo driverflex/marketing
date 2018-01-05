@@ -160,3 +160,130 @@ tr.user {
 		}
 	}
 }
+
+
+/* edit */
+
+#users-edit {
+	margin: 50px 0;
+
+	.container {
+		form {
+			.form-text {
+	  		h2 {
+	  			color: #323338;
+		  		font-weight: 600;
+		  		font-size: 24px;
+		  		margin-top: 0;
+		  		margin-bottom: 10px;
+	  		}
+  		}
+
+			.form-inputs {
+				margin-top: 50px;	
+
+  			.input {
+  				@include calc(width, "50% - 10px");
+  				margin-bottom: 20px;
+		  		float: left;
+
+		  		&:nth-child(2n+1) {
+		  			margin-right: 20px;
+		  		}
+
+		  		label {
+		  			display: block;
+		  			color: #323338;
+		  			font-weight: 700;
+		  			font-size: 12px;
+		  			margin-bottom: 10px;
+		  		}
+
+					.error {
+						color: $error;
+						font-size: 11px;
+						margin-top: 3px;
+					}
+  			}
+
+  			.field_with_errors {
+		  		input {
+		  			border: 1px solid $error;
+		  		}
+
+	  			.hint {
+	  				display: none;
+	  			}
+	  		}
+
+	  		.radio_buttons {
+	  			margin-left: -25px;
+	  			padding-left: 25px;
+	  			display: block;
+	  			width: 100%;
+
+		  		.radio {
+			  		display: inline-block;
+			  		margin-right: 40px;
+			  		clear: both;
+
+			  		label {
+			  			font-size: 13px;
+			  			color: #323338;
+			  			font-weight: 400;
+
+			  			input {
+			  				margin-top: 3px;
+			  			}
+			  		}
+			  	}
+	  		}
+			}
+
+			.form-actions {
+	  		button {
+		  		width: 50%;
+
+		  		svg {
+		  			@include scale(1.5);
+		  			display: inline-block;
+		  			height: 15px;
+		  			margin-bottom: -5px;
+		  			margin-left: 5px;
+		  		}
+		  	}
+	  	}
+		}
+	}
+}
+
+@media only screen and (max-width: 736px) {
+	#users-edit {
+		.container {
+			form {
+				.form-inputs {
+
+					.input {
+						width: 100%;
+						margin-right: 0;
+					}
+
+					.user_first_name, .user_last_name {
+						@include calc(width, "50% - 10px");
+						float: left;
+					}
+
+					#user_first_name {
+						margin-right: 0px;
+					}
+				}
+
+				.form-actions {
+					button {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

@@ -6,6 +6,6 @@ module LayoutsHelper
 
 	# style menu background according to pge type
 	def menu_type
-		"secondary" if current_page?(users_path)
+		"secondary" if controller_name == "users"
 	end
 end
