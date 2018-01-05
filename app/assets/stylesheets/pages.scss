@@ -400,6 +400,10 @@
 #pages-terms, #pages-privacy {
 	padding: 60px 0;
 
+	.mobile-header {
+		display: none;
+	}
+
 	.container {
 		h2 {
 			margin-bottom: 50px;
@@ -428,4 +432,26 @@
 			}
 		}
 	}
+}
+
+@media only screen and (max-width: 736px) {
+	#pages-terms, #pages-privacy {
+		padding: 40px 0;
+
+		.mobile-header {
+			display: block;
+			background: $secondary;
+			color: white;
+			font-weight: 600;
+			padding: 80px 0 40px 0;
+			margin-top: -90px;
+			text-align: center;
+			font-size: 20px;
+			margin-bottom: 40px;
+		}
+
+		h2 {
+			display: none;
+		}
+	}	
 }
