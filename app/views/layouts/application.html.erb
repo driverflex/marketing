@@ -15,5 +15,6 @@
     <%= render partial: "layouts/flash" unless flash.empty? %>
     <%= yield %>
     <%= render partial: "layouts/footer" unless current_page?(new_user_registration_path) || current_page?(new_user_session_path) %>
+    <%= render partial: "shared/chat" %>
   </body>
 </html>
