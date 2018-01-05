@@ -10,12 +10,14 @@
   </head>
 
   <body>
-    <%= render partial: "layouts/header" if ["pages", "users"].include?(controller_name) %>
-    <%= render partial: "layouts/menu" %>
-    <%= render partial: "layouts/sidebar" %>
-    <%= render partial: "layouts/flash" unless flash.empty? %>
-    <%= yield %>
-    <%= render partial: "layouts/footer" if ["pages", "users"].include?(controller_name) %>
     <%= render partial: "shared/chat" %>
+    <div class="content">
+      <%= render partial: "layouts/header" if ["pages", "users"].include?(controller_name) %>
+      <%= render partial: "layouts/menu" %>
+      <%= render partial: "layouts/sidebar" %>
+      <%= render partial: "layouts/flash" unless flash.empty? %>
+      <%= yield %>
+    </div>
+    <%= render partial: "layouts/footer" if ["pages", "users"].include?(controller_name) %>
   </body>
 </html>
